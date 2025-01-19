@@ -23,7 +23,7 @@ const ConstraintReportCard = ({
     <View
       style={tw("flex flex-row justify-between items-stretch mb-4")}
       wrap={false}
-      key={layerIndex}
+      key={`constraint-${layer.layerId}`}
     >
       {/* Image Card */}
       <View style={tw("flex w-[45%] flex-col mb-0.5 flex-1")}>
@@ -68,6 +68,7 @@ const ConstraintReportCard = ({
           type="automatedMessage"
           marginAdjustment="-mt-[1.8]"
           tw={tw}
+          key={`automated-${layer.layerId}`}
         />
         <MessageCard
           title="Custom Notes"
@@ -75,6 +76,7 @@ const ConstraintReportCard = ({
           type="customMessage"
           marginAdjustment="mt-[0.8]"
           tw={tw}
+          key={`custom-${layer.layerId}`}
         />
         <MessageCard
           title="Importance"
@@ -82,6 +84,7 @@ const ConstraintReportCard = ({
           type="importance"
           marginAdjustment="mt-0"
           tw={tw}
+          key={`importance-${layer.layerId}`}
         />
         <LevelsCard
           title="Risk Level"
@@ -90,6 +93,7 @@ const ConstraintReportCard = ({
           }
           type="riskLevel"
           tw={tw}
+          key={`risk-${layer.layerId}`}
         />
         <MessageCard
           title="Risk Level Explanation"
@@ -97,6 +101,7 @@ const ConstraintReportCard = ({
           type="riskLevelExplaination"
           marginAdjustment="mt-0"
           tw={tw}
+          key={`risk-explanation-${layer.layerId}`}
         />
       </View>
     </View>

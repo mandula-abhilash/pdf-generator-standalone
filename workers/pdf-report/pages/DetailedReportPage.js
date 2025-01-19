@@ -60,6 +60,7 @@ const DetailedReportPage = ({
           ?.filter((layer) => layer.name !== "LIDAR Elevation Points")
           .map((layer, layerIndex) => (
             <ConstraintReportCard
+              key={`detailed-${layer.layerId}`}
               layerIndex={layerIndex}
               layer={layer}
               sortOrder={sortOrder}
